@@ -1,0 +1,128 @@
+body {
+  background-color: #e6f0fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #2563eb;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #4b5563;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.breathing-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #bfdbfe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  transition: all 1s ease;
+}
+
+.breathing-circle.inhale {
+  background-color: #3b82f6;
+  transform: scale(1.25);
+}
+
+.breathing-circle.hold {
+  background-color: #60a5fa;
+  transform: scale(1.1);
+}
+
+.breathing-circle.exhale {
+  background-color: #93c5fd;
+  transform: scale(1);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+#stopBreathing {
+  background-color: #dc2626;
+}
+
+#stopBreathing:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.quote {
+  color: #4b5563;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .breathing-circle {
+    width: 100px;
+    height: 100px;
+  }
+}
